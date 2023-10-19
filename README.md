@@ -20,9 +20,28 @@ Or install it yourself as:
 
     $ gem install lean_seo
 
-## Usage
 
-TODO: Write usage instructions here
+## Customizing SEO Optimization Configuration
+
+To configure the SEO Optimization Gem for your application, open the initializer file located at `config/initializers/leanseo.rb`. This file contains default configuration settings that you can modify to suit your needs.
+
+For example, you can set your desired canonical URL structure, default URL, default site title, and schema data. Here's how you can customize the initializer:
+
+```ruby
+SeoOptimizationGem.configure do |config|
+  # Set the canonical URL structure
+  config.canonical_url_structure = '/custom-structure/:path'
+
+  # Define a different default URL
+  config.default_url = '/custom-default-url/'
+
+  # Specify your site's title
+  config.default_site_title = 'My Custom Site Title'
+
+  # Configure schema data as needed
+  config.schema_data = { ... }
+end
+
 
 ## Development
 
@@ -32,7 +51,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/lean_seo.
+Bug reports and pull requests are welcome on GitHub at https://github.com/cporrast/lean_seo.
 
 ## License
 
